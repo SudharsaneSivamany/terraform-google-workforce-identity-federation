@@ -37,6 +37,8 @@ module "workforce-identity-federation" {
       provider_config = {
         issuer_uri = "https://accounts.google.com"
         client_id  = "client-id"
+        web_sso_response_type             = "ID_TOKEN"               #optional
+        web_sso_assertion_claims_behavior = "ONLY_ID_TOKEN_CLAIMS"   #optional
       }
     }
   ]
